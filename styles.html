@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Methods Demo</title>
+
+    <!-- Internal CSS: This applies styles within the HTML file itself -->
+    <style>
+        /* Internal CSS - this will apply a green background to all divs */
+        .internal-style {
+            background-color: lightgreen;
+            color: black;
+            padding: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Internal CSS with the same selector but a different color */
+        .internal-style-conflict {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Inline CSS: This style is directly applied to the element -->
+    <div style="background-color: lightblue; color: black; padding: 20px; margin-bottom: 10px;">
+        This div uses inline CSS.
+    </div>
+
+    <!-- Class name that will be styled using internal CSS -->
+    <div class="internal-style">
+        This div uses internal CSS.
+    </div>
+
+    <!-- Class name that will be styled using both internal and external CSS -->
+    <div class="internal-style external-style">
+        This div uses both internal and external CSS.
+    </div>
+
+    <!-- Class name that will demonstrate conflicts between inline, internal, and external CSS -->
+    <div class="internal-style-conflict external-style-conflict" style="background-color: red;">
+        This div demonstrates conflicts between inline, internal, and external CSS.
+    </div>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+</body>
+</html>
